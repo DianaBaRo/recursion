@@ -45,4 +45,17 @@ function sum (array) {
          return array[index];
      };
 };
+
+//Write a recursive function to find the largest integer in an array.
+  
+function largestInt(array) {
+    if ( array.length === 0) {  //base case
+        return array[0];
+    } else {
+        array.shift();
+        return largestInt(array)
+    }
+}
+  
+//Write out a function to see if an array includes a given element.
   
