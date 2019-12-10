@@ -49,11 +49,12 @@ function sum (array) {
 //Write a recursive function to find the largest integer in an array.
   
 function largestInt(array) {
-    if ( array.length === 0) {  //base case
+    if ( array.length === 1) {  //base case
         return array[0];
     } else {
         array.shift();
-        return largestInt(array)
+        return largestInt(array);
+        //return Math.max(largestInt(array));
     }
 }
   
