@@ -1,3 +1,5 @@
+//string challenges
+
 function reverseString (string) {
   if (string.length < 2) {
     return string
@@ -5,7 +7,7 @@ function reverseString (string) {
     return reverseString(string.substring(1)) + string[0]
   }
  
-}
+};
 
 function reverseString(myString) {
   if (myString.length < 2) {
@@ -13,7 +15,7 @@ function reverseString(myString) {
   } else {
     return reverseString(myString.substring(1)) + myString[0];
   }
-}
+};
 
 function palindrome(string) {
   if (string.length === 1) {
@@ -23,4 +25,24 @@ function palindrome(string) {
   } else {
     return false;
   }
-}
+};
+  
+//Array challenges
+ //Given an array and an index, write a recursive function to add up the elements of an array.
+  
+function sum (array) {
+    if (array.length === 0) {
+        return 0; 
+    } else {
+        return array[0] + sum(array.slice(1));
+    };
+};
+  
+ function sum (array, index) {
+     if (index > 0) {
+         return  array[index] + sum(array, --index);
+     } else {
+         return array[index];
+     };
+};
+  
