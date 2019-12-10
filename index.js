@@ -14,3 +14,13 @@ function reverseString(myString) {
     return reverseString(myString.substring(1)) + myString[0];
   }
 }
+
+function palindrome(string) {
+  if (string.length === 1) {
+    return true
+  else if (string.length - 1 === string[0]) {
+    return palindrome(string.substring(1, string.length - 1));
+  } else {
+    return false;
+  }
+}
