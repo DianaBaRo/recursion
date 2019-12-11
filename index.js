@@ -59,4 +59,13 @@ function largestInt(array) {
 }
   
 //Write out a function to see if an array includes a given element.
-  
+
+function includesElement (array, element) {
+    if (array.length === 0) {
+      return false
+    } else if (array[0] === element) {
+        return true;
+    } else {
+        return includesElement(array.slice(1), element);
+    }
+}
